@@ -18,11 +18,11 @@ var titleTime;
 document.addEventListener('visibilitychange', function() {
     if (document.hidden) {
         $('[rel="icon"]').attr('href', "/img/favicon.ico");
-        document.title = '(つェ⊂) 猜猜我在哪~~';
+        document.title = '(つェ⊂) Guess where I am~~';
         clearTimeout(titleTime);
     } else {
         $('[rel="icon"]').attr('href', "/img/favicon.ico");
-        document.title = '(*´∇｀*) 被你发现啦~~' + OriginTitle;
+        document.title = '(*´∇｀*)  found it~~' + OriginTitle;
         titleTime = setTimeout(function() {
             document.title = OriginTitle;
         }, 2000);
@@ -80,3 +80,8 @@ qipao();
 $(document).ready(function(e) {
     $('.copyright').html('©2020 <i style="color:#FF6A6A;animation: announ_animation 0.8s linear infinite;" class="fa fa-heartbeat"></i> Lete乐特');
 });
+
+var full_page = document.getElementsByClassName("full_page");
+if (full_page.length != 0) {
+  full_page[0].style.background = "transparent";
+}
