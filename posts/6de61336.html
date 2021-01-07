@@ -1,0 +1,302 @@
+<!DOCTYPE html><html lang="[&quot;zh-CN&quot;,&quot;zh-TW&quot;,&quot;default&quot;]" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>v2ray开启局域网让手机可以不用挂载代理就上外网 | 杨瑜候的日常</title><meta name="keywords" content="VPN"><meta name="author" content="杨瑜候"><meta name="copyright" content="杨瑜候"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="使用v2ray开启局域网让手机可以不用挂载代理就上外网">
+<meta property="og:type" content="article">
+<meta property="og:title" content="v2ray开启局域网让手机可以不用挂载代理就上外网">
+<meta property="og:url" content="http://yangyuhou.com/posts/6de61336.html">
+<meta property="og:site_name" content="杨瑜候的日常">
+<meta property="og:description" content="使用v2ray开启局域网让手机可以不用挂载代理就上外网">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://images.h128.com/upload/202009/02/202009021155130562.jpg">
+<meta property="article:published_time" content="2020-09-25T00:00:00.000Z">
+<meta property="article:modified_time" content="2020-09-25T00:00:00.000Z">
+<meta property="article:author" content="杨瑜候">
+<meta property="article:tag" content="VPN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://images.h128.com/upload/202009/02/202009021155130562.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://yangyuhou.com/posts/6de61336"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//pingjs.qq.com"/><link rel="preconnect" href="//s4.cnzz.com"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin=""/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="preconnect" href="//zz.bdstatic.com"/><meta name="google-site-verification" content="9twF-fmlv1GaGJVsPwGvrXHI4hV-SciYxI1p8AVxgsE"/><meta name="msvalidate.01" content="https://yangyuhou.com/baidusitemap.xml"/><meta name="baidu-site-verification" content="code-tmzw1MuPsr"/><meta name="360-site-verification" content="bc2b8b2290b0eb2147bfc314355450e8"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script async="async" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>(adsbygoogle = window.adsbygoogle || []).push({
+  google_ad_client: '',
+  enable_page_level_ads: 'true'
+});</script><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?d549b554555293715307fc06d2b42ab0";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-176845038-1"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-176845038-1');
+</script><script>var _mtac = {};
+(function() {
+    var mta = document.createElement("script");
+    mta.src = "//pingjs.qq.com/h5/stats.js?v2.0.4";
+    mta.setAttribute("name", "MTAH5");
+    mta.setAttribute("sid", "500729248");
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(mta, s);
+})();
+</script><script async="async" data-pjax="data-pjax" src="https://s4.cnzz.com/z_stat.php?id=1279599005&amp;web_id=1279599005"></script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap" media="print" onload="this.media='all'"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":1,"languages":{"author":"作者: 杨瑜候","link":"链接: ","source":"来源: 杨瑜候的日常","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#121212","position":"bottom-left"},
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: true
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}
+
+// https://stackoverflow.com/questions/16839698/jquery-getscript-alternative-in-native-javascript
+const getScript = url => new Promise((resolve, reject) => {
+  const script = document.createElement('script')
+  script.src = url
+  script.async = true
+  script.onerror = reject
+  script.onload = script.onreadystatechange = function() {
+    const loadState = this.readyState
+    if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+    script.onload = script.onreadystatechange = null
+    resolve()
+  }
+  document.head.appendChild(script)
+})</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2020-09-25 00:00:00'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(function () {  window.activateDarkMode = function () {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+    }
+  }
+  window.activateLightMode = function () {
+    document.documentElement.setAttribute('data-theme', 'light')
+   if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+    }
+  }
+  const autoChangeMode = 'false'
+  const t = saveToLocal.get('theme')
+  if (autoChangeMode === '1') {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+    if (t === undefined) {
+      if (isLightMode) activateLightMode()
+      else if (isDarkMode) activateDarkMode()
+      else if (isNotSpecified || hasNoSupport) {
+        const now = new Date()
+        const hour = now.getHours()
+        const isNight = hour <= 6 || hour >= 18
+        isNight ? activateDarkMode() : activateLightMode()
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+        if (saveToLocal.get('theme') === undefined) {
+          e.matches ? activateDarkMode() : activateLightMode()
+        }
+      })
+    } else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else if (autoChangeMode === '2') {
+    const now = new Date()
+    const hour = now.getHours()
+    const isNight = hour <= 6 || hour >= 18
+    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+    else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else {
+    if (t === 'dark') activateDarkMode()
+    else if (t === 'light') activateLightMode()
+  }const asideStatus = saveToLocal.get('aside-status')
+if (asideStatus !== undefined) {
+   if (asideStatus === 'hide') {
+     document.documentElement.classList.add('hide-aside')
+   } else {
+     document.documentElement.classList.remove('hide-aside')
+   }
+}const fontSizeVal = saveToLocal.get('global-font-size')
+if (fontSizeVal !== undefined) {
+  document.documentElement.style.setProperty('--global-font-size', fontSizeVal + 'px')
+}})()</script><meta name="generator" content="Hexo 5.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/images/avstar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">14</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">20</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">9</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list-ul"></i><span> 生活</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/wallpaper/"><i class="fa-fw fas fa-camera-retro"></i><span> 壁纸</span></a></div><div class="menus_item"><a class="site-page" href="/links/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://images.h128.com/upload/202009/02/202009021155130562.jpg)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">杨瑜候的日常</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list-ul"></i><span> 生活</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/wallpaper/"><i class="fa-fw fas fa-camera-retro"></i><span> 壁纸</span></a></div><div class="menus_item"><a class="site-page" href="/links/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">v2ray开启局域网让手机可以不用挂载代理就上外网</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-09-25T00:00:00.000Z" title="发表于 2020-09-25 00:00:00">2020-09-25</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-09-25T00:00:00.000Z" title="更新于 2020-09-25 00:00:00">2020-09-25</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/VPN/">VPN</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/VPN/v2ray/">v2ray</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/VPN/v2ray/%E5%A4%96%E7%BD%91/">外网</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">908</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>2分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p><strong>使用v2ray开启局域网让手机可以不用挂载代理就上外网</strong></p>
+<a id="more"></a>
+<h1 id="一、v2ray介绍"><a href="#一、v2ray介绍" class="headerlink" title="一、v2ray介绍"></a><strong>一、v2ray介绍</strong></h1><p>市面上出现最多的词语，VPN，VPS,代理服务器（Proxy），关于这些理解可以查看我准备写的下一篇博客，抛开所有，我来说说v2ray<br>2Ray 是 Project V 下的一个工具。Project V 是一个包含一系列构建特定网络环境工具的项目，而 V2Ray 属于最核心的一个。<br>官方中介绍Project V 提供了单一的内核和多种界面操作方式。内核（V2Ray）用于实际的网络交互、路由等针对网络数据的处理，而外围的用户界面程序提供了方便直接的操作流程。<br>不过从时间上来说，先有 V2Ray 才有 Project V。 如果还是不理解，那么简单地说，V2Ray 是一个与 Shadowsocks 类似的代理软件，可以用来科学上网（翻墙）学习国外先进科学技术。<br>V2Ray 定位为一个平台，任何开发者都可以利用 V2Ray 提供的模块开发出新的代理软件，所以v2ray就是代理软件</p>
+<h2 id="1、v2ray-简介"><a href="#1、v2ray-简介" class="headerlink" title="1、v2ray 简介"></a>1、v2ray 简介</h2><blockquote>
+<p>V2Ray Windows 客户端主要有两个，一个是 v2ray-core（v2ray 核心，官方客户端），另一个是 v2rayN（基于 v2ray-core 的开一个 GUI 可视化客户端），其中 v2ray-core 可以单独使用，而 v2rayN 则是基于 v2ray-core 的一个辅助可视化工具。</p>
+</blockquote>
+<p>所以推荐V2Ray Windows下面的客户端软件是V2RayN。图形化可视工具，适合新手用户。</p>
+<h2 id="2、V2Ray-Core"><a href="#2、V2Ray-Core" class="headerlink" title="2、V2Ray-Core"></a>2、V2Ray-Core</h2><p>需要注意的是 v2ray-core 区分 32 位和 64 位，大家在选择时注意自己的系统版本。</p>
+<p>官方项目下载地址：<a target="_blank" rel="noopener" href="https://github.com/v2fly/v2ray-core">点击访问</a></p>
+<p>官方软件发布地址：<a target="_blank" rel="noopener" href="https://github.com/v2ray/v2ray-core/releases">点击访问</a></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>文件名称</th>
+<th>Windows32位下载</th>
+<th>Windows64位下载</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>V2Ray-Core</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/v2ray/v2ray-core/releases/download/v4.28.2/v2ray-windows-32.zip">点击下载</a></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/v2ray/v2ray-core/releases/download/v4.28.2/v2ray-windows-64.zip">点击下载</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="3、V2RayN-（推荐）"><a href="#3、V2RayN-（推荐）" class="headerlink" title="3、V2RayN （推荐）"></a>3、V2RayN （推荐）</h2><p>v2rayN 是基于官方 v2ray-core 的一个 V2Ray GUI 客户端，提供可视化界面，非常方便。使用时只需要将 v2rayN.exe 拖入到 V2Ray-core 文件夹内即可。</p>
+<p>若是下载的完整版，即可解压直接使用。</p>
+<p>官方项目发布地址：<a target="_blank" rel="noopener" href="https://github.com/2dust/v2rayN">点击访问</a></p>
+<p>官方软件发布地址：<a target="_blank" rel="noopener" href="https://github.com/2dust/v2rayN/releases/">点击访问</a><br>| 文件名称 | V2RayN文件下载 | V2RayN-Core 完整（带运行环境）下载 |<br>| ——— | ——— | ——— |<br>| V2Ray-Core | <a target="_blank" rel="noopener" href="https://github.com/2dust/v2rayN/releases/download/3.23/v2rayN.zip">点击下载</a> | <a target="_blank" rel="noopener" href="https://github.com/2dust/v2rayN/releases/download/3.23/v2rayN-Core.zip">点击下载</a> |</p>
+<p><img src="/images/2020-09-30_113145.png" alt="界面"></p>
+<h1 id="二、v2ray开启局域网"><a href="#二、v2ray开启局域网" class="headerlink" title="二、v2ray开启局域网"></a>二、v2ray开启局域网</h1><p>平台：一台PC或其他（软件能够开启共享），一台iphone或安卓或PC等等进行局域网蹭网<br>工具：V2rayN（我在windows平台使用这个，其他平台只要有开启共享设置都一样）</p>
+<p>操作很简单！我就不用语言表达，直接上图。</p>
+<h2 id="1、查询自己ip"><a href="#1、查询自己ip" class="headerlink" title="1、查询自己ip"></a>1、查询自己ip</h2><p>不会查询自己ip的向下看，会查询的跳过直接进入第二节<br><img src="/images/2020-09-30_103349.png" alt="v2ray设置"></p>
+<p><img src="/images/2020-09-30_103444.png" alt="v2ray设置"></p>
+<p><img src="/images/2020-09-30_103537.png" alt="v2ray设置"></p>
+<h2 id="2、v2ray设置"><a href="#2、v2ray设置" class="headerlink" title="2、v2ray设置"></a>2、v2ray设置</h2><p><img src="/images/2020-09-30_102333.png" alt="v2ray设置"></p>
+<p><img src="/images/2020-09-30_102409.png" alt="v2ray设置"></p>
+<p><img src="/images/2020-09-30_102419.png" alt="v2ray设置"></p>
+<p><img src="/images/2020-09-30_103028.png" alt="v2ray设置"></p>
+<p>v2ray设置完基本上就开启了局域网共享，所以接下来就是用手机连接的教程，<strong>我不推荐</strong>PC端连接局域网共享这个<br>有PC端的最好直接使用软件代理</p>
+<h2 id="3、Android配置代理"><a href="#3、Android配置代理" class="headerlink" title="3、Android配置代理"></a>3、Android配置代理</h2><p>我申明这里使用的是华为荣耀9机型，关于别的机型，可以自己百度一下。<br>连接WiFi以后<br><img src="/images/微信图片_20200930105745.jpg" alt="Android设置"></p>
+<p><img src="/images/微信图片_20200930105738.jpg" alt="Android设置"></p>
+<p><img src="/images/微信图片_20200930105734.jpg" alt="Android设置"></p>
+<p><img src="/images/微信图片_20200930105726.jpg" alt="Android设置"></p>
+<h2 id="4、IOS配置代理"><a href="#4、IOS配置代理" class="headerlink" title="4、IOS配置代理"></a>4、IOS配置代理</h2><p><img src="/images/微信图片_20200930102455.png" alt="Android设置"></p>
+<p><img src="/images/微信图片_20200930102502.png" alt="Android设置"></p>
+<p><img src="/images/微信图片_20200930102507.png" alt="Android设置"></p>
+<p><img src="/images/微信图片_20200930102511.png" alt="Android设置"></p>
+<p>这里以后基本上就可以遨游外网，一定要记住是同一局域网下<strong>一定要将电脑打开，运行软件</strong>如果电脑关闭以后发现自己的WiFi用不了可以忘记WiFi重新登录，也可以将那个图片中的代理换成自动就好了<br>不会的可以评论，我跟你解答</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">杨瑜候</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://yangyuhou.com/posts/6de61336.html">http://yangyuhou.com/posts/6de61336.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://yangyuhou.com" target="_blank">杨瑜候的日常</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/VPN/">VPN</a></div><div class="post_share"><div class="social-share" data-image="https://images.h128.com/upload/202009/02/202009021155130562.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏<div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/images/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/images/wechat.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/images/alipa.jpg" target="_blank"><img class="post-qr-code-img" src="/images/alipa.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/undefined.html"><img class="prev-cover" src="https://images.h128.com/upload/202008/12/202008121040407467.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Hello World</div></div></a></div><div class="next-post pull-right"><a href="/posts/541bf5af.html"><img class="next-cover" src="https://images.h128.com/upload/202008/31/202008310944185882.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">使用springBoot创建一个简单的helloWorld运行</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E3%80%81v2ray%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.</span> <span class="toc-text">一、v2ray介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81v2ray-%E7%AE%80%E4%BB%8B"><span class="toc-number">1.1.</span> <span class="toc-text">1、v2ray 简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81V2Ray-Core"><span class="toc-number">1.2.</span> <span class="toc-text">2、V2Ray-Core</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81V2RayN-%EF%BC%88%E6%8E%A8%E8%8D%90%EF%BC%89"><span class="toc-number">1.3.</span> <span class="toc-text">3、V2RayN （推荐）</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C%E3%80%81v2ray%E5%BC%80%E5%90%AF%E5%B1%80%E5%9F%9F%E7%BD%91"><span class="toc-number">2.</span> <span class="toc-text">二、v2ray开启局域网</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E6%9F%A5%E8%AF%A2%E8%87%AA%E5%B7%B1ip"><span class="toc-number">2.1.</span> <span class="toc-text">1、查询自己ip</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81v2ray%E8%AE%BE%E7%BD%AE"><span class="toc-number">2.2.</span> <span class="toc-text">2、v2ray设置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81Android%E9%85%8D%E7%BD%AE%E4%BB%A3%E7%90%86"><span class="toc-number">2.3.</span> <span class="toc-text">3、Android配置代理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81IOS%E9%85%8D%E7%BD%AE%E4%BB%A3%E7%90%86"><span class="toc-number">2.4.</span> <span class="toc-text">4、IOS配置代理</span></a></li></ol></li></ol></div></div></div></div></main><footer id="footer" style="background-image: url(https://images.h128.com/upload/202009/02/202009021155130562.jpg)"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By 杨瑜候</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">欢迎您，来到我的网站！</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="font-plus" type="button" title="放大字体"><i class="fas fa-plus"></i></button><button id="font-minus" type="button" title="缩小字体"><i class="fas fa-minus"></i></button><button id="translateLink" type="button" title="简繁转换">简</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.spacingElementById('content-inner')
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.spacingElementById('content-inner')
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',()=> {preloader.endLoading()})</script><div class="js-pjax"><script>if (document.getElementsByClassName('mermaid').length) {
+  if (window.mermaidJsLoad) mermaid.init()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(() => {
+      window.mermaidJsLoad = true
+      mermaid.initialize({
+        theme: 'default',
+      })
+      false && mermaid.init()
+    })
+  }
+}</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><link rel="stylesheet" href="https://gitee.com/ymoran/hexo-file/blob/master/yangyuhou.css"><script data-pjax src="https://gitee.com/ymoran/hexo-file/blob/master/yangyuhou.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-show-text.min.js" data-mobile="true" data-text="富强,明主,文明,和谐,自由,平等,公正,法治,爱国,敬业,友善" data-fontsize="15px" data-random="2px" async="async"></script><script>(function(){
+  const bp = document.createElement('script');
+  const curProtocol = window.location.protocol.split(':')[0];
+  if (curProtocol === 'https') {
+    bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+  }
+  else{
+    bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+  }
+  bp.dataset.pjax = ''
+  const s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(bp, s);
+})()</script></div></body></html>
