@@ -1,10 +1,10 @@
-/* �Զ������� */
+/* 自定义字体 */
 @font-face {
     font-family: 'sleek';
     src: url('https://cdn.jsdelivr.net/gh/lete114/CDN2/zaxiang/sleek.woff2');
 }
 
-/* ���ػص�������ť���滻Ϊup�� */
+/* 隐藏回到顶部按钮，替换为up酱 */
 
 #go-up i {
     display: none;
@@ -19,18 +19,24 @@
     transform: translate(-70px, -80px) !important;
 }
 
-/* ��Ȩ����ȥ���»��� */
+/* 目录隐藏按钮颜色 */
 
+#toggle-sidebar {
+    color: #e58a8a !important;
+}
+
+/* 版权链接去掉下划线 */
 .layout_post .post-copyright .post-copyright-info a {
     text-decoration: none;
 }
 
-/* �����ǳ���ɫ */
+/* 博主昵称颜色 */
 .author-info__name {
     color: #ff7242;
 }
 
-/* ���ۿ�  */
+
+/* 评论框  */
 
 .vwrap {
     box-shadow: 2px 2px 5px #bbb;
@@ -41,7 +47,7 @@
 }
 
 
-/* �ύ��ť */
+/* 提交按钮 */
 
 #vcomment button {
     padding: 0.3rem 0.8rem;
@@ -57,13 +63,13 @@
 }
 
 
-/* ����������� */
+/* 评论区代码块 */
 
 .v[data-class=v] code {
     color: #c7254e;
     background-color: #F9F2F4;
 }
-/* �������ۿ� */
+/* 设置评论框 */
 
 .vcard {
     box-shadow: 2px 2px 5px #bbb;
@@ -74,7 +80,7 @@
 }
 
 
-/* ȡ���ظ������ */
+/* 取消回复聊天框 */
 
 .vquote .vcard {
     box-shadow: 2px 2px 5px transparent;
@@ -82,53 +88,54 @@
     padding: 0px;
 }
 
-/* ҳ��͸�� */
+
+/* 页脚透明 */
 
 #footer {
     background: transparent !important;
 }
 
-/* a��ǩĬ����ɫ */
+
+/* a标签默认颜色 */
 
 #article-container a {
     color: #00c4b6;
     text-decoration: none;
 }
 
-/* �����ͣʱ����ɫ */
+/* 鼠标悬停时的颜色 */
 
 #article-container a:hover {
     color: #e58a8a;
     text-decoration: none;
 }
-
-/*a��ǩ��ɫ*/
+/*a标签颜色*/
 a {
     color: #00c4b6;
 }
 
-
-/* ��ҳ�м����Ч���Ϸ� */
+/* 首页中间打字效果上方 */
 #page-header #site_title {
     color: #80bdab;
 }
-/* ���������� */
+/* 顶部导航栏 */
 #nav a {
     color: #f9f2f4;
 }
 
-/*ҳ��a��ǩ������ɫ*/
+
+/*页脚a标签字体颜色*/
 #footer-wrap a {
     color: #00c4b6;
 }
 
-/*ҳ���Զ����ֶ�������ɫ*/
-/* Ҳ���������ļ����footer_custom_text */
+/*页脚自定义字段字体颜色*/
+/* 也就是配置文件里的footer_custom_text */
 .footer_custom_text {
     color: #00c4b6;
 }
 
-/*�ƶ����Ż���ȥ���鵵����ǩ���������¡����桢��ֻ������վͳ��*/
+/*移动端优化：去除归档、标签、最新文章、公告、、只保留网站统计*/
 
 @media screen and (max-width: 800px) {
     #aside_content div:not(:last-child) {
@@ -137,109 +144,16 @@ a {
     }
 }
 
+/*移动端优化：去除归档、标签、最新文章、公告、、只保留网站统计*/
 
-/* ���ͼ�� */
-
-body {
-    cursor: url(https://cdn.jsdelivr.net/gh/lete114/CDN@1.0/Use/Jkll8I.png), auto;
+@media screen and (max-width: 800px) {
+    #aside_content div:not(:last-child) {
+        display: none;
+        font-size: 13px;
+    }
 }
 
-
-/*a��ǩ*/
-
-a:hover {
-    cursor: url(https://cdn.jsdelivr.net/gh/lete114/CDN@1.0/Use/JkuClT.png), auto;
-}
-
-
-/*��ť*/
-
-button:hover {
-    cursor: url(https://cdn.jsdelivr.net/gh/lete114/CDN@1.0/Use/JkuClT.png), auto;
-}
-
-#rightside>div>button,
-#rightside>div>a {
-    display: block;
-    margin-bottom: 2px;
-    width: 30px;
-    height: 30px;
-    color: var(--btn-color);
-    text-align: center;
-    font-size: 16px;
-    cursor: url(https://cdn.jsdelivr.net/gh/lete114/CDN@1.0/Use/JkuClT.png), auto;
-}
-
-
-/* ���� */
-
-.post-reward .reward-button {
-    cursor: url(https://cdn.jsdelivr.net/gh/lete114/CDN@1.0/Use/JkuClT.png), auto;
-}
-
-
-/* ���±�ǩ */
-
-.layout_post .tag_share .post-meta__tags {
-    cursor: url(https://cdn.jsdelivr.net/gh/lete114/CDN@1.0/Use/JkuClT.png), auto;
-}
-
-
-/* ������ */
-
-.vcol * {
-    cursor: url(https://cdn.jsdelivr.net/gh/lete114/CDN@1.0/Use/JkuClT.png), auto;
-}
-
-.v[data-class=v] .vicon {
-    cursor: url(https://cdn.jsdelivr.net/gh/lete114/CDN@1.0/Use/JkuClT.png), auto;
-}
-
-.v[data-class=v] .vbtn {
-    cursor: url(https://cdn.jsdelivr.net/gh/lete114/CDN@1.0/Use/JkuClT.png), auto;
-}
-
-
-/* �ظ� */
-
-.vat {
-    cursor: url(https://cdn.jsdelivr.net/gh/lete114/CDN@1.0/Use/JkuClT.png), auto;
-}
-
-
-/*i��ǩ*/
-
-i:hover {
-    cursor: url(https://cdn.jsdelivr.net/gh/lete114/CDN@1.0/Use/JkuClT.png), auto;
-}
-
-
-/*up��*/
-
-#upj:hover {
-    cursor: url(https://cdn.jsdelivr.net/gh/lete114/CDN@1.0/Use/JkuClT.png), auto;
-}
-
-
-/*ҳ��a��ǩ*/
-
-#footer-wrap a:hover {
-    text-decoration: none;
-    cursor: url(https://cdn.jsdelivr.net/gh/lete114/CDN@1.0/Use/JkuClT.png), auto;
-}
-
-
-/*��ҳ��*/
-
-#pagination .page-number:hover {
-    cursor: url(https://cdn.jsdelivr.net/gh/lete114/CDN@1.0/Use/JkuClT.png), auto;
-}
-/* ��ҳ����������(...) */
-.space {
-    color: #00c4b6;
-}
-
-/* ������ */
+/* 滚动条 */
 
 ::-webkit-scrollbar {
     width: 10px;
@@ -261,7 +175,9 @@ i:hover {
     background-color: #e58a8a;
 }
 
-/* ����Ч������ */
+
+
+/* 打字效果渐变 */
 
 @-webkit-keyframes Gradient {
     0% {
@@ -319,6 +235,8 @@ i:hover {
 #subtitle:before {
     background-color: rgba(0, 0, 0, 0);
 }
+
+
 
 
 
