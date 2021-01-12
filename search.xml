@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>魔改标签外挂</title>
+      <link href="posts/2402123.html"/>
+      <url>posts/2402123.html</url>
+      
+        <content type="html"><![CDATA[<div class="note default flat"><p>default 标签外挂</p></div><div class="note primary flat"><p>primary 标签外挂</p></div><div class="note success flat"><p>success 标签外挂</p></div><div class="note danger flat"><p>danger 标签外挂</p></div><div class="note info flat"><p>info 标签外挂</p></div><div class="note warning flat"><p>warning 标签外挂</p></div><h1 id="上标式标签"><a href="#上标式标签" class="headerlink" title="上标式标签"></a>上标式标签</h1><div class="tip">    <p>为简单的一句话提供的简便写法。</p></div><div class="tip success">    <p>为简单的一句话提供的简便写法。</p></div><div class="tip error">    <p>为简单的一句话提供的简便写法。</p></div><div class="tip warning">    <p>为简单的一句话提供的简便写法。</p></div><div class="tip wtgo">    <p>为简单的一句话提供的简便写法。</p></div><div class="tip ban">    <p>为简单的一句话提供的简便写法。</p></div><div class="tip home">    <p>为简单的一句话提供的简便写法。</p></div><div class="tip important">    <p>为简单的一句话提供的简便写法。</p></div><div class="tip ref">    <p>为简单的一句话提供的简便写法。</p></div><div class="tip ffa">    <p>为简单的一句话提供的简便写法。</p></div><div class="tip key">    <p>为简单的一句话提供的简便写法。</p></div><div class="tip socd">    <p>为简单的一句话提供的简便写法。</p></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> 魔改 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+            <tag> 魔改 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>v2ray开启局域网让手机可以不用挂载代理就上外网</title>
       <link href="posts/6de61336.html"/>
       <url>posts/6de61336.html</url>
@@ -228,7 +255,7 @@
       <link href="posts/22603.html"/>
       <url>posts/22603.html</url>
       
-        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p><strong>写博客或者github上面的文档的，就要知道Markdown语法的重要性，不知道的朋友们也别着急，一篇博客轻松搞定Markdown语法。话说这个语法超级简单，一看就会</strong></p><a id="more"></a><p>这篇博客只是简单的入门<br>Markdowm客户端快捷键如下表。</p><div class="table-container"><table><thead><tr><th>功能</th><th>快捷键</th></tr></thead><tbody><tr><td>加粗</td><td>Ctrl + B</td></tr><tr><td>斜体</td><td>Ctrl + I</td></tr><tr><td>引用</td><td>Ctrl + Q</td></tr><tr><td>插入链接</td><td>Ctrl + L</td></tr><tr><td>插入代码</td><td>Ctrl + K</td></tr><tr><td>插入图片</td><td>Ctrl + G</td></tr><tr><td>提升标题</td><td>Ctrl + H</td></tr><tr><td>有序列表</td><td>Ctrl + O</td></tr><tr><td>无序列表</td><td>Ctrl + U</td></tr><tr><td>横线</td><td>Ctrl + R</td></tr><tr><td>撤销</td><td>Ctrl + Z</td></tr><tr><td>重做</td><td>Ctrl + Y</td></tr></tbody></table></div><div class="note danger flat"><h1 id=""><a href="#" class="headerlink" title=" "></a> </h1></div>]]></content>
+        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p><strong>写博客或者github上面的文档的，就要知道Markdown语法的重要性，不知道的朋友们也别着急，一篇博客轻松搞定Markdown语法。话说这个语法超级简单，一看就会</strong></p><a id="more"></a><p>Markdowm客户端快捷键如下表。</p><div class="table-container"><table><thead><tr><th>功能</th><th>快捷键</th></tr></thead><tbody><tr><td>加粗</td><td>Ctrl + B</td></tr><tr><td>斜体</td><td>Ctrl + I</td></tr><tr><td>引用</td><td>Ctrl + Q</td></tr><tr><td>插入链接</td><td>Ctrl + L</td></tr><tr><td>插入代码</td><td>Ctrl + K</td></tr><tr><td>插入图片</td><td>Ctrl + G</td></tr><tr><td>提升标题</td><td>Ctrl + H</td></tr><tr><td>有序列表</td><td>Ctrl + O</td></tr><tr><td>无序列表</td><td>Ctrl + U</td></tr><tr><td>横线</td><td>Ctrl + R</td></tr><tr><td>撤销</td><td>Ctrl + Z</td></tr><tr><td>重做</td><td>Ctrl + Y</td></tr></tbody></table></div><div class="note danger flat"><h1 id="Markdown-怎么使用？"><a href="#Markdown-怎么使用？" class="headerlink" title="Markdown 怎么使用？"></a>Markdown 怎么使用？</h1></div><blockquote><p>如果不算扩展，Markdown的语法绝对简单到让你爱不释手。</p></blockquote><p>Markdown语法主要分为如下几大部分： <strong>标题，段落，区块引用，代码区块，强调，列表，分割线，链接，图片，反斜杠 \，符号’`’</strong>。</p><h1 id="标题用法"><a href="#标题用法" class="headerlink" title="标题用法"></a>标题用法</h1>]]></content>
       
       
       <categories>
