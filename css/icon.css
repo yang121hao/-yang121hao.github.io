@@ -1,0 +1,88 @@
+/*QQ图标*/
+@font-face {
+  font-family: "iconfont"; /* Project id 2577694 */
+  src: url('//at.alicdn.com/t/font_2577694_ap7tdy4rhz.woff2?t=1622188350337') format('woff2'),
+       url('//at.alicdn.com/t/font_2577694_ap7tdy4rhz.woff?t=1622188350337') format('woff'),
+       url('//at.alicdn.com/t/font_2577694_ap7tdy4rhz.ttf?t=1622188350337') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-qq:before {
+  content: "\e600";
+  font-size: 19px;
+ color: rgb(22, 177, 255);
+}
+
+
+
+/*github图标*/
+@font-face {
+  font-family: "iconfont"; /* Project id 2577702 */
+  src: url('//at.alicdn.com/t/font_2577702_6kgpk50hzne.woff2?t=1622190860547') format('woff2'),
+       url('//at.alicdn.com/t/font_2577702_6kgpk50hzne.woff?t=1622190860547') format('woff'),
+       url('//at.alicdn.com/t/font_2577702_6kgpk50hzne.ttf?t=1622190860547') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-GitHub:before {
+  content: "\e720";
+  font-size: 19px;
+}
+
+
+/*邮箱*/
+@font-face {
+  font-family: "iconfont"; /* Project id 2577822 */
+  src: url('//at.alicdn.com/t/font_2577822_ecdpeqm620j.woff2?t=1622190469385') format('woff2'),
+       url('//at.alicdn.com/t/font_2577822_ecdpeqm620j.woff?t=1622190469385') format('woff'),
+       url('//at.alicdn.com/t/font_2577822_ecdpeqm620j.ttf?t=1622190469385') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-youxiang:before {
+  content: "\e645";
+  font-size: 19px;
+}
+
+/*telegram*/
+@font-face {
+  font-family: "iconfont"; /* Project id 2577861 */
+  src: url('//at.alicdn.com/t/font_2577861_jvvijxov1np.woff2?t=1622191494130') format('woff2'),
+       url('//at.alicdn.com/t/font_2577861_jvvijxov1np.woff?t=1622191494130') format('woff'),
+       url('//at.alicdn.com/t/font_2577861_jvvijxov1np.ttf?t=1622191494130') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-telegram:before {
+  content: "\f245";
+  font-size: 19px;
+  color: rgb(16, 177, 255);
+}
