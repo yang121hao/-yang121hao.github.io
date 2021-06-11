@@ -8,7 +8,12 @@ background-image: url("https://ae01.alicdn.com/kf/H18a4b998752a4ae68b8e85d432a5a
   /* ����ͼ���С */
   background-size: cover;
 }
+/* ����͸�� */
 
+
+#aside-content  {
+    background: linear-gradient(90deg,rgba(247,149,51,.1),rgba(243,112,85,.1) 15%,rgba(239,78,123,.1) 30%,rgba(161,102,171,.1) 44%,rgba(80,115,184,.1) 58%,rgba(16,152,173,.1) 72%,rgba(7,179,155,.1) 86%,rgba(109,186,130,.1))
+}
 
 
 
@@ -17,25 +22,29 @@ background-image: url("https://ae01.alicdn.com/kf/H18a4b998752a4ae68b8e85d432a5a
 
 /*����*/
 @font-face {
-    font-family: 'canger';
+    font-family:'canger';
     src:url('https://cdn.jsdelivr.net/gh/yang121hao/YangCDN@0.1/font/canger.tff'); /* �޸ĳ�������� */
     font-display:swap
 }
 h1#site-title {
-    font-family: 'canger'!important
+    font-family:canger!important
 }
 span#subtitle {
-    font-family: 'canger'!important
+    font-family:canger!important
 }
 a#site-name {
-    font-family: 'canger'!important
+    font-family:canger!important
 	
 }
-
 body {
-	font-family: 'canger'!important;
+    font-family: 'canger';
 }
 
+
+/* �����ǳ���ɫ */
+.author-info__name {
+    color: #3CE0C3;
+}
 
 /* ����ҳ���� */
 .layout_post>#post {
